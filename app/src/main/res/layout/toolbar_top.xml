@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_25sdp"
+    android:background="@android:color/white">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guide_line_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".22" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:drawableEnd="@drawable/ic_search"
+        android:drawableTint="#ddd"
+        android:drawablePadding="@dimen/_5sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:background="@drawable/shape_rounded_border"
+        android:hint="Search"
+        android:paddingStart="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guide_line_02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_sp"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:background="#ddd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_search"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:text="Filter by"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_filter"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/selector_radio_button"
+            android:button="@null"
+            android:checked="true"
+            android:text="All"
+            android:textColor="@color/radio_color" />
+
+        <RadioButton
+            android:id="@+id/rb_active"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/selector_radio_button"
+            android:button="@null"
+            android:text="Active"
+            android:textColor="@color/radio_color" />
+
+        <RadioButton
+            android:id="@+id/rb_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/selector_radio_button"
+            android:button="@null"
+            android:text="Down"
+            android:textColor="@color/radio_color" />
+    </RadioGroup>
+
+    <RadioButton
+        android:id="@+id/btn_all_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:background="@drawable/shape_rounded_border"
+        android:button="@null"
+        android:drawableStart="@drawable/ic_location"
+        android:drawableTint="#ddd"
+        android:drawablePadding="@dimen/_5sdp"
+        android:gravity="center"
+        android:paddingEnd="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:text="All Location"
+        android:textAllCaps="false"
+        android:textColor="@color/gray_text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/app_compat_text_view"
+        app:layout_constraintStart_toEndOf="@+id/rg_filter"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/app_compat_text_view"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="0dp"
+        android:background="@drawable/shape_corner_left"
+        android:gravity="center"
+        android:text="231"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_right"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_right"
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="0dp"
+        android:background="#ddd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_notifications"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:tint="#afafaf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_menu"
+        app:layout_constraintStart_toStartOf="@id/view_right"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_notifications" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_social"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:tint="#afafaf"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_social" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_menu"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_social"
+        app:layout_constraintStart_toEndOf="@id/iv_notifications"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_list" />
+
+
+</android.support.constraint.ConstraintLayout>
